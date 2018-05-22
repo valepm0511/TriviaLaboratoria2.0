@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trivia</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+	<div class="content">
+		<h1>TRIVIA LABORATORIA</h1>
+		<!--formulario en que se pregunta el nombre-->
+		<form id="welcome" method="post">
+			<p> Bienvenid@ a la trivia de Laboratoria</p>
+			<input type="text" id="name">
+			<input type="button" name="enviar" value="enviar" onclick="nameUser()">
+		</form>
+		<!-- botones de aceptar jugar o no -->
+		<div id="confirmation">
+			<p id="hello"></p>
+			<button onclick="yes()">Si, quiero jugar!</button>
+			<button onclick="no()">No quiero jugar</button>
+		</div>
+		<!--preguntas de la trivia-->
+		<div id="questions">
+			<form name="formQuestion">
+				<p>Entonces Empecemos!</p>
+				<div id="question1">
+					<p>¿Que lenguaje de programacion enseñan en Laboratoria?</p>
+					<input type="radio" name="firstQuestion" value="css">CSS<br>
+					<input type="radio" name="firstQuestion" value="javascript">JavaScript<br>
+					<input type="radio" name="firstQuestion" value="html">HTML<br>
+					<input type="radio" name="firstQuestion" value="php">PHP<br>
+					<input type="radio" name="firstQuestion" value="c++">C++<br>
+				</div>
+				<div id="question2">
+					<p>¿Cuantos meses dura el bootcamp de Laboratoria?</p>
+					<input type="radio" name="secondQuestion" value="2">2<br>
+					<input type="radio" name="secondQuestion" value="4">4<br>
+					<input type="radio" name="secondQuestion" value="6">6<br>
+					<input type="radio" name="secondQuestion" value="8">8<br>
+					<input type="radio" name="secondQuestion" value="10">10<br>
+				</div>
+				<input type="button" value="Comprobar Respuestas" onclick="checkAnswer()">
+				<!--<button onclick="checkAnswer()">Comprobar Respuestas</button>-->
+			</form>
+			<div id="answerRight">
+				<p>Respuestas Correctas</p>
+			</div>
+			<div id="answerWrong">
+				<p>Respuestas Incorrectas</p>
+			</div>
+			<div id="points"></div>
+		</div>
+
+		<p id="bye"></p>
+		<input type="button" value="Comenzar otra vez" onclick="location.reload();">
+
+	</div>
+	<script src="logica.js"></script>
+</body>
+</html>
