@@ -85,7 +85,11 @@ window.logica.answers = () => {
     } else {
         contentAnswer.innerHTML += `<p class="text-danger">Lastima te equivocaste, Laboratoria esta en 5 paises</p>`;
     }
-    contentAnswer.innerHTML += `<p class="lead text-center">Obtviste ${score} puntos </p>`;
+    contentAnswer.innerHTML += `<p class="lead text-center">Obtviste ${score} puntos </p>
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-warning mt-2" name="volver" value="volver" onclick="location.reload()">Volver</button>
+    </div>
+    `;
 
 
 
@@ -96,7 +100,7 @@ window.logica.no = () => {
     contentQuestion.innerHTML = `
     <p class="text-center display-4 text-success">:'(</p>
     <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-warning mt-2" name="volver" value="volver" onclick="location.reload()">Volver</button>
+        <button type="button" class="btn btn-outline-warning mt-2" name="volver" value="volver" onclick="location.reload()">Volver</button>
     </div>
     `;
 }
