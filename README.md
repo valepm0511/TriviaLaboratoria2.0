@@ -1,4 +1,4 @@
-![image](img4.jpg)
+![image](https://user-images.githubusercontent.com/38740899/47269490-b8c90e80-d534-11e8-916f-4f8c71c11c84.png)
 
 **"Trivia Laboratoria"** fue el primer proyecto realizado en laboratoria durante la semana de preadmisión y luego optimizada durante la primera semana de clases.
 
