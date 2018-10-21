@@ -11,11 +11,11 @@
 
 ## Vistas
 
-![image](img1.jpg)
+![image](https://user-images.githubusercontent.com/38740899/47269493-d007fc00-d534-11e8-8134-e41eab15f2e3.png)
+##
+![image](https://user-images.githubusercontent.com/38740899/47269495-d5fddd00-d534-11e8-8ede-bfa725eed021.png)
 
-![image](img2.jpg)
-
-![image](img3.jpg)
+![image](https://user-images.githubusercontent.com/38740899/47269497-dac29100-d534-11e8-81aa-fd004e80c276.png)
 
 ## Enlace deploy
 
