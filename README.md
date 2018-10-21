@@ -21,6 +21,8 @@
 
 deploy versión mejorada
 
+https://valepm0511.github.io/TriviaLaboratoria2.0/
 
 deploy version semana de preadmisión
 
+https://valepm0511.github.io/Trivia-Laboratoria/
