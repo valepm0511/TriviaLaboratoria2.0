@@ -18,31 +18,72 @@
             </div>
         </div>
         <div class="row justify-content-center ml-0 mr-0">
-            <div id="welcome" class="col-10 col-md-6 ">
+            <div id="welcome" class="col-10 col-md-6 displayBlock">
                 <p class="text-center"> Bienvenid@ a la trivia de Laboratoria</p>
-                <div class="form-group col-6 m-auto" id="contentName">
-                    <!-- <label>Ingresa tu nombre</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
-                    <button type="button" class="btn btn-warning mt-2" name="enviar" value="enviar" onclick="window.logica.nameUser()">Enviar</button> -->
-                    <p class="text-center">¿Quieres jugar?</p>
-                    <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-outline-info mx-1 w-25" onclick="window.logica.yes()">Si!</button>
-                        <button type="button" class="btn btn-outline-info mx-1 w-25" onclick="window.logica.no()">No</button>
-                    </div>
+            </div>
+            <div class="form-group col-10 m-auto" id="contentQuestion">
+                <p class="text-center">¿Quieres jugar?</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-info mx-1 w-25" onclick="window.logica.yes()">Si!</button>
+                    <button type="button" class="btn btn-outline-info mx-1 w-25" onclick="window.logica.no()">No</button>
                 </div>
             </div>
+
         </div>
+        <div class="displayNone form-group col-6 m-auto" id="contentName">
+            <p>Ingresa tu nombre:</p>
+            <input type="text" class="form-control" id="name">
+            <button type="button" class="btn btn-warning mt-2" name="enviar" value="enviar" onclick="window.logica.question()">Enviar</button>
+        </div>
+        <div id="contentFormQuestion" class="displayNone form-group col-10 m-auto">
+            <p class="text-center" id="goPlay"></p>
+            <div class="form-check">
+                <form name="formQuestion">
+                    <div id="question1">
+                        <p>¿Que lenguaje de programacion enseñan en Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="css" name="firstQuestion">
+                        <label class="form-check-label">CSS</label> </br>
+                        <input class="form-check-input" type="radio" value="javascript" name="firstQuestion">
+                        <label class="form-check-label"> Javascript</label> </br>
+                        <input class="form-check-input" type="radio" value="php" name="firstQuestion">
+                        <label class="form-check-label">PHP</label></br>
+                        <input class="form-check-input" type="radio" value="c++" name="firstQuestion">
+                        <label class="form-check-label">C++</label></br>
+                        <input class="form-check-input" type="radio" value="java" name="firstQuestion">
+                        <label class="form-check-label">Java</label></br>
+                    </div>
+                    <div id="question2">
+                        <p>¿Cuantos meses dura el bootcamp de Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="2" name="secondQuestion">
+                        <label class="form-check-label">2</label></br>
+                        <input class="form-check-input" type="radio" value="4" name="secondQuestion">
+                        <label class="form-check-label">4</label></br>
+                        <input class="form-check-input" type="radio" value="6" name="secondQuestion">
+                        <label class="form-check-label">6</label></br>
+                        <input class="form-check-input" type="radio" value="8" name="secondQuestion">
+                        <label class="form-check-label">8</label></br>
+                        <input class="form-check-input" type="radio" value="10" name="secondQuestion">
+                        <label class="form-check-label">10</label></br>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-outline-info mx-1 w-75" onclick=" window.logica.answers()">Comprobar respuestas</button>
+            </div>
+        </div>
+        <div id="contentAnswer" class="displayNone">
+            <p>Resultados</p>
+        </div>
+    </div>
 
-        <!--formulario en que se pregunta el nombre-->
+    <!--formulario en que se pregunta el nombre-->
 
-        <!-- botones de aceptar jugar o no -->
-        <!-- <div id="confirmation ">
+    <!-- botones de aceptar jugar o no -->
+    <!-- <div id="confirmation ">
             <p id="hello "></p>
             <button onclick="yes() ">Si, quiero jugar!</button>
             <button onclick="no() ">No quiero jugar</button>
         </div> -->
-        <!--preguntas de la trivia-->
-        <!-- <div id="questions ">
+    <!--preguntas de la trivia-->
+    <!-- <div id="questions ">
 			<form name="formQuestion ">
 				<p>Entonces Empecemos!</p>
 				<div id="question1 ">
@@ -73,8 +114,9 @@
 			<div id="points "></div>
 		</div>-->
 
-        <!-- <p id="bye "></p>
+    <!-- <p id="bye "></p>
         <input type="button " value="Comenzar otra vez " onclick="location.reload(); "> -->
+    <div id="ww" class="displayNone"></div>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
