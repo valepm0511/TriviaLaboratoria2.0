@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trivia Laboratoria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <div class="content ml-0 mr-0">
+        <div class="row justify-content-center mt-5 ml-0 mr-0">
+            <div class="col-10 col-md-8">
+                <img src="logo.png" alt="logo" class="img-fluid d-block mx-auto">
+                <h1 class="lead text-center mt-3">TRIVIA LABORATORIA</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center ml-0 mr-0">
+            <div id="welcome" class="col-8  displayBlock">
+                <p class="text-center"> Bienvenid@ a la trivia de Laboratoria</p>
+            </div>
+            <div class="form-group col-6 m-auto" id="contentQuestion">
+                <p class="text-center">¿Quieres jugar?</p>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-info mx-1 w-25" onclick="window.logica.yes()">Si!</button>
+                    <button type="button" class="btn btn-outline-info mx-1 w-25" onclick="window.logica.no()">No</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="displayNone form-group col-4 m-auto row" id="contentName">
+            <p>Ingresa tu nombre:</p>
+            <input type="text" class="form-control" id="name">
+            <button type="button" class="btn btn-outline-warning mt-2" name="enviar" value="enviar" onclick="window.logica.question()">Enviar</button>
+        </div>
+
+        <div id="contentFormQuestion" class="displayNone form-group col-6 m-auto">
+            <p class="text-center" id="goPlay"></p>
+            <div class="form-check">
+                <form name="formQuestion">
+                    <div id="question1" class="mt-3">
+                        <p class="alignText">1.- ¿Que lenguaje de programacion enseñan en Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="css" name="firstQuestion">
+                        <label class="form-check-label">CSS</label> </br>
+                        <input class="form-check-input" type="radio" value="javascript" name="firstQuestion">
+                        <label class="form-check-label"> Javascript</label> </br>
+                        <input class="form-check-input" type="radio" value="php" name="firstQuestion">
+                        <label class="form-check-label">PHP</label></br>
+                        <input class="form-check-input" type="radio" value="c++" name="firstQuestion">
+                        <label class="form-check-label">C++</label></br>
+                        <input class="form-check-input" type="radio" value="java" name="firstQuestion">
+                        <label class="form-check-label">Java</label></br>
+                    </div>
+                    <div id="question2" class="mt-5">
+                        <p class="alignText">2.- ¿Cuantos meses dura el bootcamp de Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="2" name="secondQuestion">
+                        <label class="form-check-label">2</label></br>
+                        <input class="form-check-input" type="radio" value="4" name="secondQuestion">
+                        <label class="form-check-label">4</label></br>
+                        <input class="form-check-input" type="radio" value="6" name="secondQuestion">
+                        <label class="form-check-label">6</label></br>
+                        <input class="form-check-input" type="radio" value="8" name="secondQuestion">
+                        <label class="form-check-label">8</label></br>
+                        <input class="form-check-input" type="radio" value="10" name="secondQuestion">
+                        <label class="form-check-label">10</label></br>
+                    </div>
+                    <div id="question3" class="mt-5">
+                        <p class="alignText">3.- ¿Desdes que edad se puede postular a Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="15" name="thirdQuestion">
+                        <label class="form-check-label">15 años</label></br>
+                        <input class="form-check-input" type="radio" value="18" name="thirdQuestion">
+                        <label class="form-check-label">18 años</label></br>
+                        <input class="form-check-input" type="radio" value="20" name="thirdQuestion">
+                        <label class="form-check-label">20 años</label></br>
+                        <input class="form-check-input" type="radio" value="30" name="thirdQuestion">
+                        <label class="form-check-label">30 años</label></br>
+                        <input class="form-check-input" type="radio" value="cualquiera" name="thirdQuestion">
+                        <label class="form-check-label">no hay un minimo de edad</label></br>
+                    </div>
+                    <div id="question4" class="mt-5">
+                        <p class="alignText">4.- ¿Quiénes pueden postular a Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="mujeres" name="fourthQuestion">
+                        <label class="form-check-label">Todas las mujeres mayores de 18 años</label></br>
+                        <input class="form-check-input" type="radio" value="hombres" name="fourthQuestion">
+                        <label class="form-check-label">Hombres mayores de 18 años</label></br>
+                        <input class="form-check-input" type="radio" value="ambos" name="fourthQuestion">
+                        <label class="form-check-label">Mujeres y Hombres</label></br>
+                        <input class="form-check-input" type="radio" value="chilenas" name="fourthQuestion">
+                        <label class="form-check-label">Solo mujeres chilenas</label></br>
+                        <input class="form-check-input" type="radio" value="profesionales" name="fourthQuestion">
+                        <label class="form-check-label">Solo mujeres con una profesión</label></br>
+                    </div>
+                    <div id="question5" class="mt-5">
+                        <p class="alignText">5.- ¿Cuál es el slogan de Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="1" name="fifthQuestion">
+                        <label class="form-check-label">Talento que Transforma</label></br>
+                        <input class="form-check-input" type="radio" value="2" name="fifthQuestion">
+                        <label class="form-check-label">Mujeres tech</label></br>
+                        <input class="form-check-input" type="radio" value="3" name="fifthQuestion">
+                        <label class="form-check-label">Mujeres poderosas</label></br>
+                        <input class="form-check-input" type="radio" value="4" name="fifthQuestion">
+                        <label class="form-check-label">Codigo que Transforma</label></br>
+                        <input class="form-check-input" type="radio" value="5" name="fifthQuestion">
+                        <label class="form-check-label">Amamos Javascritp</label></br>
+                    </div>
+                    <div id="question6" class="mt-5">
+                        <p class="alignText">6.- ¿En cuantos paises se encuentra Laboratoria?</p>
+                        <input class="form-check-input" type="radio" value="4" name="sixthQuestion">
+                        <label class="form-check-label">4</label></br>
+                        <input class="form-check-input" type="radio" value="3" name="sixthQuestion">
+                        <label class="form-check-label">3</label></br>
+                        <input class="form-check-input" type="radio" value="5" name="sixthQuestion">
+                        <label class="form-check-label">5</label></br>
+                        <input class="form-check-input" type="radio" value="2" name="sixthQuestion">
+                        <label class="form-check-label">2</label></br>
+                        <input class="form-check-input" type="radio" value="1" name="sixthQuestion">
+                        <label class="form-check-label">1</label></br>
+                    </div>
+                </form>
+                <div class="mb-5 mt-5">
+                    <button type="button" class="btn btn-outline-info mx-1 w-50 mt-5 mb-5 d-block m-auto" onclick=" window.logica.answers()">Comprobar respuestas</button>
+                </div>
+
+
+            </div>
+        </div>
+        <div id="contentAnswer" class="displayNone col-6 m-auto">
+            <p class="lead text-center">Resultados</p>
+        </div>
+    </div>
+
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js "></script>
+    <script src="logica.js "></script>
+</body>
+
+</html>
