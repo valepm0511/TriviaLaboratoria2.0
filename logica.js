@@ -29,34 +29,65 @@ window.logica.question = () => {
 }
 
 window.logica.answers = () => {
-    document.getElementById('contentFormQuestion').classList.remove('displayNone');
-    document.getElementById('contentFormQuestion').classList.add('displayBlock');
+    document.getElementById('contentFormQuestion').classList.remove('displayBlock');
+    document.getElementById('contentFormQuestion').classList.add('displayNone');
     let answer1 = document.formQuestion.firstQuestion.value;
     let answer2 = document.formQuestion.secondQuestion.value;
+    let answer3 = document.formQuestion.thirdQuestion.value;
+    let answer4 = document.formQuestion.fourthQuestion.value;
+    let answer5 = document.formQuestion.fifthQuestion.value;
+    let answer6 = document.formQuestion.sixthQuestion.value;
     console.log(answer2);
     console.log(answer1);
-    let score1 = 0;
-    let score2 = 0;
+    let score = 0;
     document.getElementById('contentAnswer').classList.remove('displayNone');
     document.getElementById('contentAnswer').classList.add('displayBlock');
     document.getElementById('contentAnswer');
-    // let answerRight = document.getElementById('answerRight');
-    // let answerWrong = document.getElementById('answerWrong');
 
-    let scoreTotal = score1 + score2;
     if (answer1 == "javascript") {
-        contentAnswer.innerHTML += `<p>Correcto, enseña JavaScript </p>`;
-        score1 += 100;
+        contentAnswer.innerHTML += `<p class="text-success">Correcto, enseña JavaScript </p>`;
+        score += 100;
     } else {
-        contentAnswer.innerHTML += `<p>Lastima te equivocaste, enseña JavaScript </p>`;
+        contentAnswer.innerHTML += `<p class="text-danger">Lastima te equivocaste, enseña JavaScript </p>`;
     }
 
     if (answer2 == "6") {
-        contentAnswer.innerHTML += `<p>Correcto, son 6 meses </p>`;
-        score2 += 100;
+        contentAnswer.innerHTML += `<p class="text-success">Correcto, son 6 meses </p>`;
+        score += 100;
     } else {
-        contentAnswer.innerHTML += `<p>Lastima te equivocaste, son 6 meses </p>`;
+        contentAnswer.innerHTML += `<p class="text-danger">Lastima te equivocaste, son 6 meses </p>`;
     }
+
+    if (answer3 == "18") {
+        contentAnswer.innerHTML += `<p class="text-success">Correcto, es desde los 18 años </p>`;
+        score += 100;
+    } else {
+        contentAnswer.innerHTML += `<p class="text-danger">Lastima te equivocaste, es desde los 18 años</p>`;
+    }
+
+    if (answer4 == "mujeres") {
+        contentAnswer.innerHTML += `<p class="text-success">Correcto, todas las mujeres desde los 18 años </p>`;
+        score += 100;
+    } else {
+        contentAnswer.innerHTML += `<p class="text-danger">Lastima te equivocaste, todas las mujeres desde los 18 años</p>`;
+    }
+
+    if (answer5 == "1") {
+        contentAnswer.innerHTML += `<p class="text-success">Correcto, el slogan es "Talento que Transforma" </p>`;
+        score += 100;
+    } else {
+        contentAnswer.innerHTML += `<p class="text-danger">Lastima te equivocaste, el slogan es "Talento que Transforma"</p>`;
+    }
+
+    if (answer6 == "5") {
+        contentAnswer.innerHTML += `<p class="text-success">Correcto, Laboratoria esta en 5 paises </p>`;
+        score += 100;
+    } else {
+        contentAnswer.innerHTML += `<p class="text-danger">Lastima te equivocaste, Laboratoria esta en 5 paises</p>`;
+    }
+    contentAnswer.innerHTML += `<p class="lead text-center">Obtviste ${score} puntos </p>`;
+
+
 
 }
 
@@ -68,36 +99,4 @@ window.logica.no = () => {
         <button type="button" class="btn btn-warning mt-2" name="volver" value="volver" onclick="location.reload()">Volver</button>
     </div>
     `;
-}
-
-
-//comprobacion de respuestas
-function checkAnswer() {
-    document.getElementById("confirmation").style.display = "none";
-    var answer1 = document.formQuestion.firstQuestion.value;
-    var answer2 = document.formQuestion.secondQuestion.value;
-    var score1 = 0;
-    var score2 = 0;
-    var scoreTotal = score1 + score2;
-
-    if (answer1 == "javascript") {
-        document.getElementById("answerRight").innerHTML = document.getElementById("answerRight").innerHTML + "<p>Correcto, enseña JavaScript </p>";
-        score1 += 100;
-    } else {
-        document.getElementById("answerWrong").innerHTML = document.getElementById("answerWrong").innerHTML + "<p>Lastima te equivocaste, enseña JavaScript </p>";
-    }
-
-    if (answer2 == "6") {
-        document.getElementById("answerRight").innerHTML = document.getElementById("answerRight").innerHTML + "<p>Correcto, son 6 meses </p>";
-        score2 += 100;
-    } else {
-        document.getElementById("answerWrong").innerHTML = document.getElementById("answerWrong").innerHTML + "<p>Lastima te equivocaste, son 6 meses </p>";
-    }
-
-    document.getElementById("points").innerHTML = document.getElementById("points").innerHTML + ""
-}
-//accion al responder que no quiere jugar
-
-function no() {
-    document.getElementById("bye").innerHTML = ":'(";
 }

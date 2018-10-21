@@ -10,3 +10,7 @@
 .displayBlock {
     display: block;
 }
+
+.alignText {
+    margin-left: -20px;
+}
